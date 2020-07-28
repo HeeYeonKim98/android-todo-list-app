@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
             if (todotext.isNotEmpty()){
                 todolistArray.add(todotext);
                 adapter.notifyDataSetChanged()
-                TodoText.setText("");
+                TodoText.setText("안녕");
             }
         }
     }
