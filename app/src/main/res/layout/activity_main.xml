@@ -17,23 +17,34 @@
         android:ems="10"
         android:hint="오늘의 할일은?"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toStartOf="@+id/TodoButton"
+        app:layout_constraintEnd_toStartOf="@+id/TodoButton_add"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/TodoButton"
-        android:layout_width="77dp"
+        android:id="@+id/TodoButton_add"
+        android:layout_width="53dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#CDC1F1"
+        android:text="저장"
+        app:layout_constraintEnd_toStartOf="@+id/TodoButton_delete"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/TodoButton_delete"
+        android:layout_width="53dp"
         android:layout_height="39dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
         android:background="#CDC1F1"
-        android:text="저장"
+        android:text="삭제"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/TodoList"
