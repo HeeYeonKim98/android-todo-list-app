@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         var adapter:ArrayAdapter<String> = ArrayAdapter(this, android.R.layout.simple_list_item_1,todolistArray)
+//        TodoList.setMultiChoiceModeListener(ListView.CHOICE_MODE_MULTIPLE)
 
         TodoButton_add.setOnClickListener(){
             var todotext = TodoText.text.toString()
@@ -31,12 +32,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         TodoList.setOnItemClickListener(){
-            parent: AdapterView<*>?, view: View?, position: Int, id: Long ->
-            android.widget.Toast.makeText(this, "항목을 선택하였습니다",android.widget.Toast.LENGTH_LONG ).show()
+                parent: AdapterView<*>?, view: View?, position: Int, id: Long ->
+            android.widget.Toast.makeText(this, "항목을 선택하였습니다 : "+todolistArray[position],android.widget.Toast.LENGTH_LONG ).show()
         }
 
         TodoButton_delete.setOnClickListener(){
-            val position :SparseBooleanArray = TodoList.checkedItemPositions
+            val position : SparseBooleanArray = TodoList.checkedItemPositions
             val count = TodoList.count
             var item = count -1
             while(item>=0){

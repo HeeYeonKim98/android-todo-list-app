@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -11,12 +11,19 @@
         android:id="@+id/TodoText"
         android:layout_width="225dp"
         android:layout_height="46dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="32dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="29dp"
+        android:background="#E2DBEF"
         android:ems="10"
         android:hint="오늘의 할일은?"
         android:inputType="textPersonName"
+        android:singleLine="true"
+        android:textColorHighlight="#6A607E"
+        android:textColorLink="#6A607E"
         app:layout_constraintEnd_toStartOf="@+id/TodoButton_add"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,11 +31,13 @@
 
     <Button
         android:id="@+id/TodoButton_add"
-        android:layout_width="53dp"
-        android:layout_height="39dp"
+        android:layout_width="56dp"
+        android:layout_height="36dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_toStartOf="@+id/TodoButton_delete"
+        android:layout_toLeftOf="@+id/TodoButton_delete"
         android:background="#CDC1F1"
         android:text="저장"
         app:layout_constraintEnd_toStartOf="@+id/TodoButton_delete"
@@ -36,11 +45,13 @@
 
     <Button
         android:id="@+id/TodoButton_delete"
-        android:layout_width="53dp"
-        android:layout_height="39dp"
+        android:layout_width="56dp"
+        android:layout_height="36dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
         android:background="#CDC1F1"
         android:text="삭제"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,9 +61,9 @@
         android:id="@+id/TodoList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="107dp"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="0dp" />
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="107dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
